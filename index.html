@@ -250,6 +250,10 @@
 								.html(d['properties']['TOWN'])
 								.style('left', m.clientX + 'px')
 								.style('top', m.clientY + 'px')
+							largeTooltip
+								.transition()
+								.duration(3000)
+								.style('opacity', 0.9)
 							largeTooltip.html(`Town: ${d['properties']['TOWN']} <br />
 										County: ${gini.get(d['properties']['FIPS_STCO'].toString())[0]['Geographic_Area_Name'].split(' ')[0]} <br />
 										Gini Index: ${gini.get(d['properties']['FIPS_STCO'].toString())[0]['Estimate_Gini_Index']} <br />
